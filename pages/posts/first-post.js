@@ -42,7 +42,7 @@ class FirstPost extends Component {
 
 	imageSetter() {
 		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg', 'coin.jpg'];
-		let imageSelector = Math.floor(Math.random() * 5);
+		let imageSelector = Math.floor(Math.random() * 6);
 		console.log(imageSelector);
 		this.setState({ displayImage: images[imageSelector]});
 	}
@@ -63,7 +63,7 @@ class FirstPost extends Component {
 			<Container>
 			<Row>
 			  <Col xs={3} md={6}>
-				<Image src={`/images/${this.state.displayImage}`} fluid='true' style={styles.image} onClick={this.rotateImage} />
+				<Image src={`/images/${this.state.displayImage}`} fluid style={styles.image} onClick={this.rotateImage} />
 			  </Col>
 			</Row>
 		  </Container>
