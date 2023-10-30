@@ -29,12 +29,19 @@ class FirstPost extends Component {
 		if(this.state.begin === 1 && this.state.selected === 0) {
 			setTimeout(this.imageSetter, this.state.countdown);
 		} else if (this.state.begin === 1 && this.state.selected === 1) {
-			setTimeout(this.imageSetter, 30000);
+			for (let i = 0; i < 1; i++)
+			{
+				if (i === 0) {
+					setTimeout(this.imageSetter, 30000);
+				} else {
+					this.rotateImage();
+				}
+			}
 		}
 	}
 
 	imageSetter() {
-		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg', 'star.jpg'];
+		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg', 'coin.jpg'];
 		let imageSelector = Math.floor(Math.random() * 5);
 		console.log(imageSelector);
 		this.setState({ displayImage: images[imageSelector]});
