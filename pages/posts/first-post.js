@@ -34,8 +34,8 @@ class FirstPost extends Component {
 	}
 
 	imageSetter() {
-		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg'];
-		let imageSelector = Math.floor(Math.random() * 4);
+		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg', 'star.jpg'];
+		let imageSelector = Math.floor(Math.random() * 5);
 		console.log(imageSelector);
 		this.setState({ displayImage: images[imageSelector]});
 	}
