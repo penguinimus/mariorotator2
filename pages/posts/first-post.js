@@ -7,8 +7,8 @@ import Row from 'react-bootstrap/Row';
 
 const styles = {
     image: {
-        height: 1000,
-        width: 1000,
+        height: 750,
+        width: 750,
     }
   };
 
@@ -56,7 +56,7 @@ class FirstPost extends Component {
 			<Container>
 			<Row>
 			  <Col xs={3} md={6}>
-				<Image src={`/images/${this.state.displayImage}`} fluid='true' style={styles.image} onClick={this.rotateImage} />
+				<Image src={`/images/${this.state.displayImage}`} fluid='true' style={styles.image} onTouchStart={this.rotateImage} />
 			  </Col>
 			</Row>
 		  </Container>
