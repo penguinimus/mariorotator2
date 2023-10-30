@@ -26,10 +26,10 @@ class FirstPost extends Component {
 	}
 
 	componentDidUpdate() {
-		if (begin > 0) {
-			if(this.state.begin === 1 && this.state.selected === 0) {
+		if (this.state.begin > 0) {
+			if(this.state.selected === 0) {
 				setTimeout(this.imageSetter, this.state.countdown);
-			} else if (this.state.begin === 1 && this.state.selected === 1) {
+			} else if (this.state.selected === 1) {
 				for (let i = 0; i < 1; i++)
 				{
 					if (i === 0) {
