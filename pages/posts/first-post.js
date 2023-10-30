@@ -26,15 +26,17 @@ class FirstPost extends Component {
 	}
 
 	componentDidUpdate() {
-		if(this.state.begin === 1 && this.state.selected === 0) {
-			setTimeout(this.imageSetter, this.state.countdown);
-		} else if (this.state.begin === 1 && this.state.selected === 1) {
-			for (let i = 0; i < 1; i++)
-			{
-				if (i === 0) {
-					setTimeout(this.imageSetter, 30000);
-				} else {
-					this.rotateImage();
+		if (begin > 0) {
+			if(this.state.begin === 1 && this.state.selected === 0) {
+				setTimeout(this.imageSetter, this.state.countdown);
+			} else if (this.state.begin === 1 && this.state.selected === 1) {
+				for (let i = 0; i < 1; i++)
+				{
+					if (i === 0) {
+						setTimeout(this.imageSetter, 30000);
+					} else {
+						this.rotateImage();
+					}
 				}
 			}
 		}
@@ -42,7 +44,7 @@ class FirstPost extends Component {
 
 	imageSetter() {
 		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg', 'coin.jpg'];
-		let imageSelector = Math.floor(Math.random() * 5);
+		let imageSelector = Math.floor(Math.random() * 4);
 		console.log(imageSelector);
 		this.setState({ displayImage: images[imageSelector]});
 	}
