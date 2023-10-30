@@ -33,9 +33,9 @@ class FirstPost extends Component {
 				for (let i = 0; i < 1; i++)
 				{
 					if (i === 0) {
-						setTimeout(this.imageSetter, 30000);
+						this.imageSetter;
 					} else {
-						this.rotateImage();
+						this.rotateImage;
 					}
 				}
 			}
@@ -44,7 +44,7 @@ class FirstPost extends Component {
 
 	imageSetter() {
 		let images = ['flower.jpg', 'mushroom.jpg', 'star.jpg', '1up.jpg', 'coin.jpg'];
-		let imageSelector = Math.floor(Math.random() * 4);
+		let imageSelector = Math.floor(Math.random() * 5);
 		console.log(imageSelector);
 		this.setState({ displayImage: images[imageSelector]});
 	}
